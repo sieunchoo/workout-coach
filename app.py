@@ -4,7 +4,7 @@ import pandas as pd
 from openai import OpenAI
 
 # OpenAI Client (새 방식)
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # CSV 파일 
 workout_df = pd.read_csv("workout.csv")
